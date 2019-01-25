@@ -5,14 +5,19 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+# check that Multiqc executable exists
+describe file('/usr/local/bin/multiqc') do
+  it { should be_file }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+# Check that MultiQC executable is in the path
+describe command('which multiqc') do
+  its(:exit_status) { should eq 0 }
+  its(:stdout) { should match('multiqc') }
+end
+
+# Check that MultiQC works
+describe command('multiqc --version') do
+  its(:exit_status) { should eq 0 }
+  its(:stdout) { should match('1.7') }
 end
