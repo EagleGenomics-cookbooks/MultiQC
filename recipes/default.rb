@@ -6,7 +6,7 @@
 
 apt_update 'update'
 
-package %w(python-pip python-dev gfortran libfreetype6-dev pkg-config libpng12-dev) do
+package %w(python-pip python-dev gfortran libfreetype6-dev pkg-config libpng-dev) do
   action :install
 end
 
