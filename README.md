@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/EagleGenomics-cookbooks/MultiQC.svg?branch=master)](https://travis-ci.com/EagleGenomics-cookbooks/MultiQC)
-
 # MultiQC
 
-TODO: Enter the cookbook description here.
+[![Build Status](https://travis-ci.org/EagleGenomics-cookbooks/MultiQC.svg?branch=master)](https://travis-ci.org/EagleGenomics-cookbooks/MultiQC)
+
+Chef cookbook for installing MultiQC
