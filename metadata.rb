@@ -11,4 +11,3 @@ source_url 'https://github.com/EagleGenomics-cookbooks/MultiQC'
 issues_url 'https://github.com/EagleGenomics-cookbooks/MultiQC/issues'
 
 depends 'magic_shell'
-depends 'seven_zip', '= 2.0.2'
