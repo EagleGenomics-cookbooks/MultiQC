@@ -15,3 +15,7 @@ bash 'install multiqc' do
     pip install multiqc==#{node['multiqc']['version']}
     EOH
 end
+
+magic_shell_environment 'MULTIQC_VERSION' do
+  value node['multiqc']['version']
+end
