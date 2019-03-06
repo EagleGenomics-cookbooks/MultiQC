@@ -4,16 +4,10 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
-apt_update 'update'
+include_recipe 'python_setup'
 
-package %w(python-pip python-dev gfortran libfreetype6-dev pkg-config libpng-dev) do
-  action :install
-end
-
-bash 'install multiqc' do
-  code <<-EOH
-    pip install multiqc==#{node['multiqc']['version']}
-    EOH
+pyenv_pip 'multiqc' do
+  version node['multiqc']['version']
 end
 
 magic_shell_environment 'MULTIQC_VERSION' do
