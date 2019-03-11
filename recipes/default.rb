@@ -13,3 +13,11 @@ end
 magic_shell_environment 'MULTIQC_VERSION' do
   value node['multiqc']['version']
 end
+
+magic_shell_environment 'LC_ALL' do
+  value 'C.UTF-8'
+end
+
+magic_shell_environment 'LANG' do
+  value 'C.UTF-8'
+end
